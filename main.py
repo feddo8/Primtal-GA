@@ -13,9 +13,8 @@ while n < 2500000:
       delbar = True
       break
     if nummer > sqrtn:
+      primtal.append(n)
       break
-  if delbar == False:
-    primtal.append(n)
 
 now1 = datetime.datetime.now()
 for nummer in primtal:
