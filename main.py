@@ -1,6 +1,5 @@
-import datetime
-now = datetime.datetime.now()
-print (now.strftime("%Y-%m-%d %H:%M:%S"))
+import time
+t0 = time.time()
 from math import sqrt
 primtal = [2,3]
 n=3
@@ -15,11 +14,8 @@ while n < 2500000:
     if nummer > sqrtn:
       primtal.append(n)
       break
-
-now1 = datetime.datetime.now()
+t1 = time.time()
 for nummer in primtal:
   print(nummer)
 
-print (now.strftime("%Y-%m-%d %H:%M:%S"))
-print (now1.strftime("%Y-%m-%d %H:%M:%S"))
-
+print("Time required :", t1 - t0)
