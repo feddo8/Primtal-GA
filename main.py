@@ -1,21 +1,18 @@
 import time
 t0 = time.time()
 from math import sqrt
-primtal = [2,3]
+primtal = {2,3}
 n=3
-while n < 2500000:
+while n < 1000000:
   n+=2
-  delbar = False
   sqrtn = sqrt(n)
-  for nummer in primtal:
-    if n % nummer == 0:
-      delbar = True
+  for primnummer in primtal:
+    if n % primnummer == 0:
       break
-    if nummer > sqrtn:
-      primtal.append(n)
+    if primnummer > sqrtn:
+      primtal.add(n)
       break
 t1 = time.time()
-for nummer in primtal:
-  print(nummer)
+
 
 print("Time required :", t1 - t0)
